@@ -19,7 +19,7 @@ abstract class Vehicle {
     private double regularPrice;
     private String color;
 
-    public Vehicle(double speed, double regularPrice, String color) {
+    Vehicle(double speed, double regularPrice, String color) {
         this.speed = speed;
         this.regularPrice = regularPrice;
         this.color = color;
@@ -30,19 +30,17 @@ abstract class Vehicle {
         this.color = color;
     }
 
-    public double getRegularPrice() {
+    double getRegularPrice() {
         return regularPrice;
     }
 
-    public double getSalePrice() {
-        return 0d;
-    }
+    public abstract double getSalePrice();
 }
 
 class Truck extends Vehicle {
     private double weight;
 
-    public Truck(double speed, double regularPrice, String color, double weight) {
+    Truck(double speed, double regularPrice, String color, double weight) {
         super(speed, regularPrice, color);
         this.weight = weight;
     }
@@ -63,7 +61,7 @@ class Bus extends Vehicle {
     private String year;
     private double manufacturerDiscount;
 
-    public Bus(double speed, double regularPrice, String color, String date, double manufacturerDiscount) {
+    Bus(double speed, double regularPrice, String color, String date, double manufacturerDiscount) {
         super(speed, regularPrice, color);
         this.year = date;
         this.manufacturerDiscount = manufacturerDiscount;

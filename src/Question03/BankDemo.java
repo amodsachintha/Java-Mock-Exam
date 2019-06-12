@@ -34,7 +34,7 @@ public class BankDemo {
                         break;
                     default:
                         System.out.println("Invalid selection!");
-                        System.exit(-1);
+                        System.exit(1);
                 }
             }
         }
@@ -61,7 +61,7 @@ class Account {
         this.balance += amount;
     }
 
-    public double getBalance() {
+    double getBalance() {
         return balance;
     }
 
